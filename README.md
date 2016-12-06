@@ -1,7 +1,6 @@
 # PBTerminalClient
 
-About:
-- Terminal Client for download torrents using The Pirate Bay website.
+Terminal Client for download torrents using The Pirate Bay website.
 
 Requirements: 
 * Python 2.7
