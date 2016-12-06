@@ -1,28 +1,25 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 from torrent import Torrent
+from scrap import PB
 from lxml import html
-import requests
+import requests, sys
 
 def main():
     print("Pirate Bay Terminal Client")
     busca = raw_input("\nPesquisar: ")
     num = int(raw_input("Número máximo de arquivos: "))
-    url = 'https://thepiratebay.org/search/'+busca+'/0/99/0'
     
-    pagina = requests.get(url)
-    tree = html.fromstring(pagina.content)
-
-    itens = tree.xpath("//tr//div[@class='detName']//a/text()")
-    links = tree.xpath("//tr//a[@title='Download this torrent using magnet']/@href")
-
-    if links:
+    pb = PB(busca)
+    pb.get_links()
+    
+    if pb.links:
         for i in range(num):
-            print(str(i+1) + " - " + itens[i])
+            print(str(i+1) + " - " + pb.itens[i])
         escolha = int(raw_input("\nEscolha: ")) - 1
 
-        magnet = links[escolha]
-        caminho = itens[escolha]
+        magnet = pb.links[escolha]
+        caminho = pb.itens[escolha]
         torrent = Torrent(caminho, magnet)
         
         torrent.connect()
