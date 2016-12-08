@@ -13,9 +13,15 @@ def main():
     pb.get_links()
     
     if pb.links:
+
+        print("\n0 - Sair")
+
         for i in range(num):
             print(str(i+1) + " - " + pb.itens[i])
         escolha = int(raw_input("\nEscolha: ")) - 1
+        
+        if int(escolha) + 1 == 0:
+            sys.exit("Sair")
 
         magnet = pb.links[escolha]
         caminho = pb.itens[escolha]
