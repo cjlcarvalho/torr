@@ -2,8 +2,7 @@
 # -*- coding: utf-8 -*-
 from torrent import Torrent
 from scrap import PB
-from lxml import html
-import requests, sys
+import sys
 
 def main():
     print("Pirate Bay Terminal Client")
