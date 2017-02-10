@@ -1,4 +1,4 @@
-# PBTerminalClient
+# TORRTerminalClient
 
 Terminal Client for download torrents. (It's only using The Pirate Bay for a while)
 
