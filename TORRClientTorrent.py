@@ -5,7 +5,7 @@ from scrap import PB
 import sys
 
 def main():
-    print("Pirate Bay Terminal Client")
+    print("TORR Terminal Client")
     busca = raw_input("\nPesquisar: ")
     num = int(raw_input("Número máximo de arquivos: "))
     
