@@ -1,6 +1,6 @@
 # PBTerminalClient
 
-Terminal Client for download torrents using The Pirate Bay website.
+Terminal Client for download torrents. (It's only using The Pirate Bay for a while)
 
 Requirements: 
 ---
